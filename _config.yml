@@ -11,11 +11,10 @@ github_username:  ReScience
 # Build settings
 markdown: kramdown
 
-
-exclude: [vendor]
-
 # Exclude:
 exclude: ["README.md"]
+
+exclude: [vendor]
 
 
 # Jekyll scholar
