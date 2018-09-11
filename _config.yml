@@ -12,6 +12,8 @@ github_username:  ReScience
 markdown: kramdown
 
 
+exclude: [vendor]
+
 # Exclude:
 exclude: ["README.md"]
 
