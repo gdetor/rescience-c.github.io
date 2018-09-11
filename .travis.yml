@@ -9,9 +9,9 @@ env:
     secure: W26HPDG7Vr+Qn7gAQAwuIpnP3iDLytrmOGmzau/LVtxPSAQMxeLDRlILoDUVaMi72+zHzuiCKa+lCn0ZEK7g7xbMInkvxnPHW+xXjVW/qtlPO3+vKCE9vZGlfHr1iN+uhlTOu/Czac3EeRQhhn2ApT45jvpHCRG1+qkkV3enLTilqAp3NmVS3C4tdZH8BoMcDwvJ+etfCSBdiAfRxypB8rwERYe32/OICfBgH1N1UtFoFNqfMPhOnhtNkgE+vefe9cP97iKnwGYlN4O0IKU6LCxxrt70vnt8YfBea1o7g/LrGX/SuMt+F7L6pRDLvUtXpGjzbkAkQT0Z22TrJ3HUJrP4qiMCON1zhp2oQIhCtHsWT3w11NUpRtUCDR6UTTeJiYkvl3hC+dUgHcQBqnlyr5urzunvTOtYniLM96AqvhIqCX7ytZSuKmjft8wQJzkaTowEydanwo28wqCgBwsm4HcN02Z7I/igpUCrVgc0EJUbeYC5lP0z+95MNbNBoAkogs3l0pdclXLSRoSBGbUXMr8oUflhHtsvNvDRE/LB/R5tWx28JP6zzW5GX3YhU5ufafwwVK1Wn8L+o3kN39WncP6VgIw9lWtUqniFnKgyGMGKXxQwxtHcJGe+6n8PDLSVYjlPWBu4dFwZmcAO1zDnaZPdvpoYqi/zi+E1IprMHT4=
 
 
-before_install:
-  - gem update --system
-  - gem update bundler
+#before_install:
+#  - gem update --system
+#  - gem update bundler
 
 script: bundle exec jekyll build
   
