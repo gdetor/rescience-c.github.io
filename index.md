@@ -2,7 +2,7 @@
 layout: page
 ---
 
-# Reproducible Science is good. Replicated Science is better.
+# Reproducible Science is good. Replicated Science is better..
 
 Re**Science** is an open-access peer-reviewed journal that targets
 computational research and encourages the explicit [replication](faq) of
