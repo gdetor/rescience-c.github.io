@@ -20,7 +20,7 @@ using the `git pull` command.
 
 ### Successful replications
 
-Most articles in Re**Science** reports successful replication of the
+Most articles in ReScience C report a successful replication of the
 results (figures, tables, ...) of previously published research work.
 A full replication covers all the results of the original work, whereas
 a partial replication covers only a subset of the results.
@@ -47,10 +47,10 @@ The main criteria for acceptance are
 
 The primary goal of the review is not to decide whether to accept or
 reject a submission, but to help the authors improve their work until
-it meets the Re**Science** quality standards. Since Re**Science**
+it meets the ReScience C quality standards. Since ReScience C
 targets replication of already published research, there is no need to
 judge the relevance or novelty of the work. Every replication that
-meets the criteria listed above is welcome in Re**Science**.
+meets the criteria listed above is welcome in ReScience C.
 Rejection remains of course a possiblity, in the case that the
 authors are not able or willing to improve their submission as
 deemed necessary by the reviewers.
@@ -74,7 +74,7 @@ capabilities and use.
 A replication attempt can lead to the finding that the results of the
 original paper cannot be reproduced, suggesting a mistake or ommission
 in the original work. The failure can concern some or all of the results.
-Re**Science** accepts reports on replication failures, but requires a
+ReScience C accepts reports on replication failures, but requires a
 particularly careful examination by the reviewers. The authors must describe
 in detail why they believe that the original work is mistaken, and the
 reviewers must be convinced by the reasoning offered by the authors.
@@ -82,7 +82,7 @@ reviewers must be convinced by the reasoning offered by the authors.
 Authors who are confronted with replication failure are strongly encouraged
 to contact the authors of the original work and try to explore the causes
 of the replication failure in collaboration with them. This is, however, not
-a requirement for publication in Re**Science**.
+a requirement for publication in ReScience C.
 
 
 # The editing process
@@ -108,15 +108,14 @@ practices of the domain.
   editor after having obtained his or her agreement.
 * During the review, reviewers are free to interact with the authors to ask for
   clarification or change in any file that is part of the submission.
-* Don't forget to update issuer labels according to the status of submission
+* Don't forget to update issue labels according to the status of submission
 * The main criterion for acceptance is either:
   * Replication of the original research with a clear statement by the authors
   explaining why they think they have replicated the paper (same figures, same
   graphics, same behavior, etc.).
-  * Non replication of the oroginal research with a clear statement by the
-  authors explaining why they think this cannot be replicated .
-  * A code without the accompanying article is also a criterion for rejection
-  since we're not human compilers (well not all of us at least).
+  * Non-replication of the original research with a clear statement by the
+  authors explaining why they believe that it cannot be replicated .
+  * Source code without any accompanying article is also a criterion for rejection since we're not human compilers (well not all of us at least).
 * Don't forget to check that there is a license in the code repository. Authors
   can choose whatever open license they prefer (see [the Debian Free Software
   Guidelines](https://www.debian.org/social_contract#guidelines)) but they need
@@ -126,15 +125,15 @@ practices of the domain.
 
 # The publication process
 
-The publication is alsmot automatic but still requires some manual steps:
+The publication is almost automatic but still requires some manual steps:
 
   * [Reserve a new article number]() and communicate it to the author(s)
   * [Reserve a new DOI]() and communicate it to the author(s)
-  * Make sure author has updated all the missing metadata in the YAML file
-  * Make sure author regenerated the PDF
+  * Make sure the author has updated all the missing metadata in the YAML file
+  * Make sure the author has regenerated the PDF
   * Fork the author repository under the ReScience archives
     (https://github.com/ReScience-Archives) organization.
-  * Upload paper to Zenodo using the provided [upload-zenodo.py]() script.
+  * Upload the paper to Zenodo using the provided [upload-zenodo.py]() script.
   * Generate a new bibtex entry using the provided [generate-bibtex.py]()
   * Make a pull request to add this new entry to the [list of published articles]()
   * Add stars on [the board](http://rescience.github.io/board/) to the editor
