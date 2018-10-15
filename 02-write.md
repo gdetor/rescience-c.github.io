@@ -6,7 +6,7 @@ permalink: /write/
 
 # Overview of the submission process
 
-The Re**Science** editorial board unites scientists who are committed to the
+The ReScience C editorial board unites scientists who are committed to the
 open source community. Each editorial board member is specialised in a specific
 domain of science and is proficient in several programming languages and/or
 environments. Our aim is to provide all authors with an efficient, constructive
@@ -18,8 +18,8 @@ replicated and is publicly available), or assign it to two reviewers for
 further review and tests. The reviewers evaluate the code and the accompanying
 material in continuous interaction with the authors through the PR discussion
 section. If both reviewers managed to run the code and obtain the same results
-as the ones advertised in the accompanying material, the submission is
-accepted. If any of the two reviewers cannot replicate the results before the
+as the ones advertised in the accompanying material, and if they consider that these results are a replication of the original work, the submission is
+accepted. If any of the two reviewers cannot reproduce the results before the
 deadline, the submission is rejected and authors are encouraged to resubmit an
 improved version later.
 
@@ -30,7 +30,7 @@ improved version later.
 * If you have data, make sure to make them available on [Zenodo](https://zenodo.org/) or [figshare](https://figshare.com/) 
 * Write the corresponding paper using this [LaTeX template]() **or** your own template
 * Fill metadata associated with your submission using the [provided template]()
-* Open an issue on [ReScience submission](https://github.com/ReScience/ReScience-submission) asking for a review
+* Open an issue on [ReScience C submissions](https://github.com/rescience-c/submissions) asking for a review
 * Answer reviewers comments and modify your code and paper accordingly (if necessary)
 * Once accepted, you will need to:
   * complete the metadata in collaboration with the editor
@@ -50,16 +50,15 @@ research of your close collaborators. We believe such restrictions will favor
 the cross-fertilization of research and the spread of knowledge.
 
 ReScience accepts negative results as well, meaning here a failure to
-replicate the original results. The authors of the failed replication are
-expected to document their claim of failure. An attempt to have contacted the
-authors of the original article is also asked to the authors of the
-replication.
+replicate the original results. The authors of the failed replication
+are expected to document their claim of failure, and to have attempted
+to contact the authors of the original article.
 
 
 ## Open Access
 
 ReScience C applies the Creative Commons Attribution (CC BY) license to all
-works we publish. Under the CC BY license, authors retain ownership of the
+works it publishes. Under the CC BY license, authors retain ownership of the
 copyright for their article, but authors allow anyone to download, reuse,
 reprint, modify, distribute, and/or copy articles in ReScience C journal, so
 long as the original authors and source are cited. No permission is required
