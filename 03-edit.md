@@ -9,7 +9,8 @@ permalink: /edit/
 
 A submission takes the form of an issue. If you're unfamiliar with GitHub, do
 not hesitate to ask advices and informations to the editor in charge of editing
-the submission. You can have a look at what a full [submission](https://github.com/ReScience/ReScience-submission/pull/3) looks like. Reviewers unfamiliar with git should have a look athttp://git-lectures.github.io
+the submission. Reviewers unfamiliar with git should have a look at
+http://git-lectures.github.io. 
 
 To review a submission, you'll first have to clone the author's repository onto
 your desktop environment and each time an author update the manuscript or code
@@ -25,7 +26,7 @@ results (figures, tables, ...) of previously published research work.
 A full replication covers all the results of the original work, whereas
 a partial replication covers only a subset of the results.
 
-The main criteria for acceptance are
+The main criteria for acceptance of a successful replication are
 
  1. The actual replication of the research. The reviewer must evaluate
     the authors' claims about a successful replication, applying the
@@ -71,13 +72,13 @@ capabilities and use.
 
 ### Failed replications
 
-A replication attempt can lead to the finding that the results of the
-original paper cannot be reproduced, suggesting a mistake or ommission
-in the original work. The failure can concern some or all of the results.
-ReScience C accepts reports on replication failures, but requires a
-particularly careful examination by the reviewers. The authors must describe
-in detail why they believe that the original work is mistaken, and the
-reviewers must be convinced by the reasoning offered by the authors.
+A replication attempt can lead to the finding that the results of the original
+paper cannot be reproduced, suggesting a critical mistake or ommission in the
+original work that cannot be fixed. The failure can concern some or all of the
+results.  ReScience C accepts reports on replication failures, but requires a
+particularly careful examination by the reviewers. The authors must describe in
+detail why they believe that the original work is mistaken, and the reviewers
+must be convinced by the reasoning offered by the authors.
 
 Authors who are confronted with replication failure are strongly encouraged
 to contact the authors of the original work and try to explore the causes
@@ -89,11 +90,10 @@ a requirement for publication in ReScience C.
 
 The role of a scientific editor is to manage a submission from start to end,
 i.e.  from the initial acknowledgment request by the editor-in-chief to the
-final [publication](../read) (with DOI). As an editor, your goal is to help
-authors improve their submission in order to meet the journal's quality
-standards and to ensure that anyone can re-use the published code. Depending on
-the specific domain, an editor might request the article to follow best
-practices of the domain. 
+final publication. As an editor, your goal is to help authors improve their
+submission in order to meet the journal's quality standards and to ensure that
+anyone can re-use the published code. Depending on the specific domain, an
+editor might request the article to follow best practices of the domain.
 
 
 ## Editor guidelines
@@ -125,20 +125,15 @@ practices of the domain.
 
 # The publication process
 
-The publication is almost automatic but still requires some manual steps:
+The publication is now almost automatic but still requires some manual steps
+that are given in the [README](https://github.com/rescience-c/articles) of the
+articles repository.  
 
-  * [Reserve a new article number]() and communicate it to the author(s)
-  * [Reserve a new DOI]() and communicate it to the author(s)
-  * Make sure the author has updated all the missing metadata in the YAML file
-  * Make sure the author has regenerated the PDF
-  * Fork the author repository under the ReScience archives
-    (https://github.com/ReScience-Archives) organization.
-  * Upload the paper to Zenodo using the provided [upload-zenodo.py]() script.
-  * Generate a new bibtex entry using the provided [generate-bibtex.py]()
-  * Make a pull request to add this new entry to the [list of published articles]()
-  * Add stars on [the board](http://rescience.github.io/board/) to the editor
-    and reviewers (linking to the review)
-  * Try to contact the editor and the authors of the original article to tell
-    them about the successful or unsuccessful replication of their work
-  * Add the `Published` label to the review issue and close it
+After publication, you can try to contact the editor and the authors of the
+original article to tell them about the successful (or unsuccessful) replication
+of their work.  
+
+You can also tweet about the new paper, with CC to @ReScienceEds.  
+
+Finally, you can close the issue.  
 
