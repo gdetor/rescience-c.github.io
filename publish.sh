@@ -1,7 +1,8 @@
 #! /bin/bash
 
-TGT_BRANCH=master  # Branch containing the website
-SRC_BRANCH=sources # Branch containing source files
+TGT_BRANCH=master  # Branch containing the wstatic website
+SRC_BRANCH=sources # Branch containing source files for the website
+CURRENT_BRANCH=$(git rev-parse --abbrev-ref HEAD)
 BUILD_DIR=$(mktemp -d)
 
 
@@ -28,17 +29,16 @@ echo "clean"
 COMMIT_DATE=$(git log --pretty=format:'%cd' -n 1)
 COMMIT_HASH=$(git log --pretty=format:'%h' -n 1)
 echo "Commit to be published: $COMMIT_HASH ($COMMIT_DATE)"
-echo ""
 
 
 # Website building
-echo -n "Building static website... " 
-bundle exec jekyll build -d $BUILD_DIR &> build.log
+echo "Building static website" 
+bundle exec jekyll build -d $BUILD_DIR
 if ! [ -d "$BUILD_DIR" ]; then
-    echo "failed"
+    echo "Building has failed, aborting."
     exit 0
 fi
-echo "success!"
+echo ""
 
 # Switch to target branch
 echo -n "Switching to target branch ($TGT_BRANCH)... "
