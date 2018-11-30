@@ -1,61 +1,67 @@
 #! /bin/bash
 
-BUILD_DIR="./_site"
-TMP_DIR="/tmp/jekyll_build"
+TGT_BRANCH=master  # Branch containing the wstatic website
+SRC_BRANCH=sources # Branch containing source files for the website
 CURRENT_BRANCH=$(git rev-parse --abbrev-ref HEAD)
+BUILD_DIR=$(mktemp -d)
 
-# We first check if there are any pending changes
-if [ -n "$(git status --untracked-files=no --porcelain)" ]; then
-    echo -n "There are pending changes. "
-    echo "Please commit your them before publishing."
+
+# Switch to sources branch
+echo -n "Switching to source branch ($SRC_BRANCH)... "
+if ! git checkout -q $SRC_BRANCH; then
+    echo "failed"
     exit 0
 fi
+echo "success"
+
+
+# Check if there are any pending changes
+echo -n "Checking repository status... "
+if [ -n "$(git status --untracked-files=no --porcelain)" ]; then
+    echo "dirty"
+    echo " → Please commit pending changes before publishing."
+    exit 0
+fi
+echo "clean"
+
 
 # Repository is clean we can proceed
-echo "Repository is clean. Publishing on rescience-c.github.io."
 COMMIT_DATE=$(git log --pretty=format:'%cd' -n 1)
 COMMIT_HASH=$(git log --pretty=format:'%h' -n 1)
+echo "Commit to be published: $COMMIT_HASH ($COMMIT_DATE)"
 
 
-# Delete old build files if any
-rm -rf $BUILD_DIR
-
-# Build
-bundle exec jekyll build
-
-# If build succeeds
-if [ -d "$BUILD_DIR" ]; then
-    echo "Site building successful"
-    rm -r $TMP_DIR
-
-    # Move BUILD_DIR to /tmp
-    mv $BUILD_DIR $TMP_DIR
-
-    # Change branch to master
-    if git checkout master; then
-      echo "Git: succesfully switched to master branch"
-
-      # Cleanup
-      ls | xargs rm -r
-
-      # Get the build
-      mv $TMP_DIR/* .
-
-      # Commit
-      git add .
-      git commit -m "Publishing: $COMMIT_HASH, $COMMIT_DATE"
-      if git push origin master; then
-        echo "Publishing successful."
-        echo $(basename $(git remote show -n origin | grep Fetch | cut -d: -f2-))
-      else
-        echo "Publishing failed!"
-      fi
-    else
-      echo "Cannot switch branch, aborting!"
-    fi
-
-else
-    echo "Site building faile"
+# Website building
+echo "Building static website" 
+bundle exec jekyll build -d $BUILD_DIR
+if ! [ -d "$BUILD_DIR" ]; then
+    echo "Building has failed, aborting."
+    exit 0
 fi
+echo ""
 
-git checkout $CURRENT_BRANCH
+# Switch to target branch
+echo -n "Switching to target branch ($TGT_BRANCH)... "
+if ! git checkout -q $TGT_BRANCH; then
+    echo "failed"
+    exit 0
+fi
+echo "success"
+
+
+# Publishing
+echo -n "Publishing... "
+ls | xargs rm -r 
+mv $BUILD_DIR/* .
+git add . 
+git commit -q -m "Publishing from sources branch, commit $COMMIT_HASH ($COMMIT_DATE)"
+if git push -q origin master; then
+    echo "success"
+else
+    echo "failed"
+fi
+echo ""
+
+# Cleanup
+git checkout -q $CURRENT_BRANCH
+rm -rf $BUILD_DIR
