@@ -98,24 +98,27 @@ editor might request the article to follow best practices of the domain.
 
 ## Editor guidelines
 
-* When a pull request (PR) has been assigned to you, you have to acknowledge
-  the PR (as a comment in the PR discussion). Depending on your decision, you
-  can either **reject** and close the PR (and motivate such decision) or
-  **accept** it and assign one or two reviewers (depending if you intend to
-  review the PR yourself or not). You alert the reviewers in the PR
-  acknowledgment (use the @ alert syntax). If you think you cannot handle the
-  submission within a reasonable delay, you should re-assign the PR to another
-  editor after having obtained his or her agreement.
+* When a new [submission](https://github.com/rescience-c/submissions/issues) is
+  made (i.e. a new issue has been opened), you can assign yourself in order to
+  be the editor or you can accept an invitation to edit the submission.
+* Once you've accepted, you can either **reject** the submission and close the
+  issue (you'll have to motivate such decision) or **accept** the
+  submission. You'll then need to find and invite at least two reviewers (from
+  within the same issue)
+* Once you've found the two reviewers, you can open a
+  [review](https://github.com/rescience-c/reviews/issues/new/choose) issue,
+  fill-in information and invite both author(s) and reviewers to join the
+  issue. 
 * During the review, reviewers are free to interact with the authors to ask for
   clarification or change in any file that is part of the submission.
-* Don't forget to update issue labels according to the status of submission
 * The main criterion for acceptance is either:
   * Replication of the original research with a clear statement by the authors
-  explaining why they think they have replicated the paper (same figures, same
-  graphics, same behavior, etc.).
+    explaining why they think they have replicated the paper (same figures,
+    same graphics, same behavior, etc.).
   * Non-replication of the original research with a clear statement by the
-  authors explaining why they believe that it cannot be replicated .
-  * Source code without any accompanying article is also a criterion for rejection since we're not human compilers (well not all of us at least).
+    authors explaining why they believe that it cannot be replicated .
+  * Source code without any accompanying article is also a criterion for
+    rejection since we're not human compilers (well not all of us at least).
 * Don't forget to check that there is a license in the code repository. Authors
   can choose whatever open license they prefer (see [the Debian Free Software
   Guidelines](https://www.debian.org/social_contract#guidelines)) but they need
